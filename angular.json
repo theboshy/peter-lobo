@@ -28,9 +28,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/laconchadelalora.css"
             ],
-            "scripts": []
+            "scripts": [ "./src/assets/js/min.js",
+              "./src/assets/js/laconchadelalora.js" ,
+              "./src/assets/js/boostrap.js",
+              "./src/assets/js/cloud.js",
+              "./src/assets/js/aws.js"
+            ]
           },
           "configurations": {
             "production": {
