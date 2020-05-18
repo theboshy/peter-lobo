@@ -31,14 +31,14 @@ jobs:
           paths:
             - node_modules
       - run:
-          name: public gh-pages
-          command: npm run deploy
-      - run:
           name: Configure Git
           command: |
             git config --global user.email << parameters.user-email >>
             git config --global user.name << parameters.user-name >>
             git branch --set-upstream-to=origin/$CIRCLE_BRANCH $CIRCLE_BRANCH
+      - run:
+          name: public gh-pages
+          command: npm run deploy
   test:
     docker:
       - image: circleci/node:4.8.2-jessie
