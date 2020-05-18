@@ -1,11 +1,52 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/main
+    docker:
+      - image: circleci/node:4.8.2-jessie
     steps:
-      - run: npm run deploy
+      - checkout
+      - run:
+          name: Update npm
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+      - run:
+          name: Install npm
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+          paths:
+            - node_modules
+      - gh-pages:
+          name: public gh-pages
+          command: npm run deploy
+  test:
+    docker:
+      - image: circleci/node:4.8.2-jessie
+    steps:
+      - checkout
+      - run:
+          name: Test
+          command: npm test
+      - run:
+          name: Generate code coverage
+          command: './node_modules/.bin/nyc report --reporter=text-lcov'
+      - store_artifacts:
+          path: test-results.xml
+          prefix: tests
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
 
 workflows:
   version: 2
-  flow_build:
+  build_and_test:
     jobs:
       - build
+      - test:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
