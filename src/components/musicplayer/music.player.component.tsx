@@ -30,7 +30,7 @@ const MusicPlayerComponent = (props: any) => {
     return <>
         <div className="music-player__wrapper">
 
-            <div className={playing ? normalClass : playingClass} id="musicContainer" onClick={() => toggle()}>
+            <div className={!playing ? playingClass : normalClass } id="musicContainer" onClick={() => toggle()}>
                 <audio id="audio-player" autoPlay loop>
                     <source src="" type="audio/mpeg"/>
                         <p className="sr-only">Your browser does not support the audio element.</p>
