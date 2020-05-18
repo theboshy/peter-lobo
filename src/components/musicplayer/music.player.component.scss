@@ -1,0 +1,115 @@
+
+.music-player {
+ cursor: pointer;
+  $bar-width: 10px;
+  $bar-min-height: 10px;
+  $bar-max-height: 50px;
+  $bar-margin: 5px;
+  $bar-color: #fff;
+  width: ($bar-width + $bar-margin) * 5;
+  height: $bar-max-height;
+  position: relative;
+  opacity: 1;
+  transition: opacity 200ms;
+  background: black;
+  &.music-player--disabled {
+    opacity: 0.26;
+  }
+
+  &__wrapper {
+    position: fixed;
+    right: 2rem;
+    bottom: 1.5rem;
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 1;
+    width: 100%;
+    border: 0;
+  }
+
+  &__play {
+    background: transparent;
+    display: none;
+
+    .music-player--disabled & {
+      display: block;
+    }
+  }
+
+  &__pause {
+    .music-player--disabled & {
+      display: none;
+    }
+  }
+
+  &__bar {
+    background: $bar-color;
+    width: $bar-width;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    animation-name: music-bar-anim;
+    animation-iteration-count: infinite;
+
+    .music-player--disabled & {
+      animation-play-state: paused;
+    }
+  }
+
+  &__bar1 {
+    animation-duration: 1.3s;
+    left: 0;
+  }
+
+  &__bar2 {
+    animation-duration: 1.8s;
+    left: $bar-width + $bar-margin;
+  }
+
+  &__bar3 {
+    animation-duration: 2.2s;
+    left: ($bar-width + $bar-margin) * 2;
+  }
+
+  &__bar4 {
+    animation-duration: 2s;
+    left: ($bar-width + $bar-margin) * 3;
+  }
+
+  &__bar5 {
+    animation-duration: 1.5s;
+    left: ($bar-width + $bar-margin) * 5;
+  }
+
+  @keyframes music-bar-anim {
+    0% {
+      height: $bar-min-height;
+    }
+
+    50% {
+      height: $bar-max-height;
+    }
+
+    100% {
+      height: $bar-min-height;
+    }
+  }
+}
+
+.sr-only {
+  //--hides for everything except screenreader
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+}

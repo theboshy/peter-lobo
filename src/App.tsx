@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './App.scss';
+import MusicPlayerComponent from "./components/musicplayer/music.player.component";
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
           <h1>Peter <br/> Lobo</h1>
            <h1 className="subtitle">Full Stack Software Enginering</h1>
         </div>
+          <MusicPlayerComponent/>
         <section className={!show ? "fullsize-video-bg fullsize-video-bg-c" : "fullsize-video-bg fullsize-video-bg-c fullsize-video-bg-s"} onClick={() => setShow(false)}>
           <div id="video-viewport">
             <video width="1920" height="1280" autoPlay={true} muted loop>
