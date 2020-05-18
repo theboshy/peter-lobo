@@ -9,6 +9,7 @@
     <meta name="keywords" content="HTML,CSS,JavaScript" />
     <meta name="keywords" content="peter,lobo,portfolio" />
     <meta name="keywords" content="theboshy,github" />
+    <meta name="mobile-web-app-capable" content="yes">
     <meta
             name="description"
             content="Personal portfolio page"
@@ -34,20 +35,6 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script>
-      var doc = window.document;
-      var docEl = doc.documentElement;
-
-      var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
-      var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
-
-      if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
-        requestFullScreen.call(docEl);
-      }
-      else {
-        cancelFullScreen.call(doc);
-      }
-    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
