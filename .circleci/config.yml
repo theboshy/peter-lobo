@@ -10,4 +10,9 @@ workflows:
   starFlow:
     # Run the welcome/run job in its own container
     jobs:
-      - welcome/run
+      build:
+        steps:
+          - run:
+              name: public gh-pages
+              command: npm run deploy
+
