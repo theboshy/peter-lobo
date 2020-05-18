@@ -1,6 +1,7 @@
-This is my personal portfolio: 
+<h1>This is my personal portfolio: </h1>
 
 Implements github pages to deploy my portfloi built in react with typescript.
+
 You can see the progress here [!peter-lobo](https://theboshy.github.io/peter-lobo/)
 
 
