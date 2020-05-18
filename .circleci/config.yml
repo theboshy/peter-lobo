@@ -1,4 +1,16 @@
 version: 2
+
+commands:
+  configure:
+    description: "Configure Git CLI"
+    parameters:
+      user-email:
+        type: string
+        default: "compute-ci@computesoftware.com"
+      user-name:
+        type: string
+        default: "compute-ci"
+
 jobs:
   build:
     working_directory: ~/main
@@ -21,6 +33,12 @@ jobs:
       - run:
           name: public gh-pages
           command: npm run deploy
+      - run:
+          name: Configure Git
+          command: |
+            git config --global user.email << parameters.user-email >>
+            git config --global user.name << parameters.user-name >>
+            git branch --set-upstream-to=origin/$CIRCLE_BRANCH $CIRCLE_BRANCH
   test:
     docker:
       - image: circleci/node:4.8.2-jessie
@@ -50,21 +68,3 @@ workflows:
           filters:
             branches:
               only: master
-
-
-deployment:
-
-  production:
-    branch: master
-    commands:
-      - git config --global -l #<= totally unnecessary, but "fixes" problem?
-      - git config --global user.email circleci@circleci
-      - git config --global user.name CircleCI
-      - cd _site/ && git status
-      - cd _site/ && git add --all
-      - cd _site/ && git commit -m "Update (`date '+%F %T %Z'`) [ci skip]" || true
-      - cd _site/ && git push origin gh-pages
-      - git status
-      - git add _site/
-      - git commit -m "Update _site (`date '+%F %T %Z'`) [ci skip]" || true
-      - git push origin master
