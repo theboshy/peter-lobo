@@ -17,7 +17,7 @@ const MusicPlayerComponent = (props: any) => {
     );
 
     useEffect(() => {
-        audio.volume = 0.4;
+        audio.volume = 0.2;
         audio.currentTime = 300;
         audio.addEventListener('ended', () => setPlaying(false));
         return () => {
