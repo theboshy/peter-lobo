@@ -11,7 +11,7 @@ function App() {
           <h1>Peter <br/> Lobo</h1>
            <h1 className="subtitle">Full Stack Software Enginering</h1>
         </div>
-        <section className={!show ? "fullsize-video-bg fullsize-video-bg-c" : "fullsize-video-bg fullsize-video-bg-c fullsize-video-bg-s"}>
+        <section className={!show ? "fullsize-video-bg fullsize-video-bg-c" : "fullsize-video-bg fullsize-video-bg-c fullsize-video-bg-s"} onClick={() => setShow(false)}>
           <div id="video-viewport">
             <video width="1920" height="1280" autoPlay={true} muted loop>
                 <source src="./sources/video_cover_2.mp4" type="video/mp4" />
