@@ -1,0 +1,308 @@
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+*:before, *:after { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit; }
+
+
+#video-viewport { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -1; }
+video { display: block; width: 100%; height: auto; }
+
+.fullsize-video-bg { height: 100%; overflow: hidden; }
+
+.fullsize-video-bg-s:after {
+    content: ""; background: rgba(114,45,0,.35); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+.fullsize-video-bg-c:before { content: "";
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgTWFjaW50b3NoIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI4RkZBQTgzNzg1NzExRTU4NTQyODc3OUM4MTZGMUREIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI4RkZBQTg0Nzg1NzExRTU4NTQyODc3OUM4MTZGMUREIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjhGRkFBODE3ODU3MTFFNTg1NDI4Nzc5QzgxNkYxREQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjhGRkFBODI3ODU3MTFFNTg1NDI4Nzc5QzgxNkYxREQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz66uHInAAAAIUlEQVR42mL5//8/AyMj42YGIGBigABfEMEIkoEBgAADAKvuBwVS8BAjAAAAAElFTkSuQmCC); background-size: 3px 3px; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+
+
+.fullsize-video-bg .inner { display: table; width: 100%; max-width: 24em; height: 100%; margin: 0 auto; padding: 0; position: relative; z-index: 2; text-shadow: 0 1px 5px rgba(0,0,0,.5); }
+.fullsize-video-bg .inner > div { text-align: center; display: table-cell; vertical-align: middle; padding: 0 2em; }
+
+
+h1 { font-family: "Raleway", sans-serif; font-size: 3em; line-height: .9; font-weight: 900; letter-spacing: -.025em; text-transform: uppercase; margin-bottom: .5em; }
+h1 + p { font-family: "Shadows Into Light Two", cursive; font-size: 1.5em;  }
+
+.card-component {
+    position: fixed;
+    z-index: 2;
+    top: 20.3rem;
+    left: 5rem;
+}
+
+
+.header{
+    cursor: pointer;
+    h1 {
+        font-family: 'Sucrose Bold Two';
+        position: fixed;
+        top: 19rem;
+        left: 7rem;
+        font-size: 12vw;
+        line-height: .8;
+        margin-top: 0;
+        text-align: center;
+        z-index: 2;
+        color: azure;
+        text-align: left;
+
+    }
+}
+
+.subtitle {
+    padding-top: 7em;
+    font-size: 3vw !important;
+
+}
+.header:hover{
+
+    h1 {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+        background-position: bottom;
+        background-repeat: repeat-x;
+        background-size: 20%;
+        border-bottom: 0;
+        padding-bottom: .3em;
+        text-decoration: none;
+    }
+
+}
+
+
+header h1 span {
+    font-family: 'Sucrose Bold Two';
+    display: block;
+    font-size: 8.75vw;
+    z-index: 2;
+}
+
+@font-face {
+    font-family: 'Sucrose Bold Two';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sucrose.woff2') format('woff2');
+}
+
+.hiden-info-modal-show{
+    height: 100%;
+    width: 30%;
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background: white;
+    transition: all 1s;
+}
+
+.hidden{
+    display: none;
+}
+
+.overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    font-size: 1vw;
+    font-family: 'Sucrose Bold Two';
+    color: black;
+    cursor: pointer;
+    .overlay-menu{
+      justify-content: center;
+        text-align: center;
+     }
+
+     ul{
+         list-style: none;
+         li {
+             padding: 0.3em;
+         }
+     }
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 97vh;
+    margin: 0 auto;
+    padding: 0;
+}
+
+// Menu Styles //
+.menu {
+    position: relative;
+    z-index: 10;
+}
+
+.menu__item {
+    position: relative;
+    display: block;
+    outline: none;
+    margin: 0 0 1.5em;
+    line-height: 1;
+}
+
+.menu__item-name,
+.menu__item-label {
+    position: relative;
+    display: inline-block;
+}
+
+.menu__item-name {
+    font-size: 1.25em;
+    text-transform:uppercase;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.menu__item-label {
+    margin: 0 0 0 0.5em;
+    font-weight: 300;
+}
+
+.menu--adsila {
+    font-size: 1.15em;
+    font-family: 'Teko', sans-serif;
+}
+
+.menu--adsila a {
+    color: #2e4055;
+}
+
+.menu--adsila .menu__item {
+    margin: 0 0 1em;
+}
+
+.menu--adsila .menu__item-name {
+    padding: 0 0.35em;
+    font-weight: bold;
+    line-height: 1.4;
+    transition: color 0.5s;
+    transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 50%;
+        left: 0;
+        bottom: 0;
+        opacity: 0.3;
+        transform: scale3d(0,1,1);
+        transform-origin: 0% 50%;
+        transition: transform 0.5s;
+        transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+    }
+}
+
+.menu--adsila .menu__item-label {
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transform: translate3d(-0.5em,0,0);
+    transition: transform 0.5s, color 0.5s;
+    transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 1px;
+        left: 0.05em;
+        top: 1.25em;
+        opacity: 0.3;
+        transform: scale3d(0,1,1);
+        transform-origin: 100% 50%;
+        transition: transform 0.5s;
+        transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+    }
+}
+
+.menu--adsila .menu__item:nth-child(odd) .menu__item-name::before,
+.menu--adsila .menu__item:nth-child(odd) .menu__item-label::before {
+    background: #2983ea;
+}
+
+.menu--adsila .menu__item:nth-child(even) .menu__item-name::before,
+.menu--adsila .menu__item:nth-child(even) .menu__item-label::before  {
+    background: #611aff;
+}
+
+/* Hover */
+.menu--adsila .menu__item:nth-child(odd):hover,
+.menu--adsila .menu__item:nth-child(odd):focus {
+    color: #2983ea;
+}
+
+.menu--adsila .menu__item:nth-child(even):hover,
+.menu--adsila .menu__item:nth-child(even):focus {
+    color: #611aff;
+}
+
+.menu--adsila .menu__item:hover .menu__item-name::before,
+.menu--adsila .menu__item:focus .menu__item-name::before,
+.menu--adsila .menu__item:hover .menu__item-label::before,
+.menu--adsila .menu__item:focus .menu__item-label::before {
+    transform: scale3d(1,1,1);
+}
+
+.menu--adsila .menu__item:hover .menu__item-label,
+.menu--adsila .menu__item:focus .menu__item-label {
+    transform: translate3d(0,0,0);
+}
+
+.menu--adsila .menu__item:hover .menu__item-label::before,
+.menu--adsila .menu__item:focus .menu__item-label::before {
+    transition-timing-function: ease;
+    transform-origin: 0% 50%;
+}
+
+.social-icons {
+    margin-top: -51px;
+
+    li {
+        display: inline-block;
+        margin: 0 0.25em;
+    }
+
+    a {
+        display: inline-block;
+        width: 2.5em;
+        height: 2.5em;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+
+        &:before {
+            font: 1.5em/1.75 "FontAwesome";
+        }
+
+        $iconos: (
+                twitter:  ( ico: "\f099", color: #55acee ),
+                google:   ( ico: "\f0d5", color: #dd4b39 ),
+                facebook: ( ico: "\f09a", color: #3b5998 ),
+                github:   ( ico: "\f09b", color: #231f20 ),
+                linkedin: ( ico: "\f0e1", color: #0977b5 ),
+                dribbble: ( ico: "\f17d", color: #ea4c89 ),
+                rss:      ( ico: "\f09e", color: #ff6600 )
+        );
+
+        @each $social, $icono in $iconos {
+
+            &[href*="#{$social}"] {
+                background-color: map-get($icono, color);
+
+                &:before {
+                    content: map-get($icono, ico);
+                }
+            }
+
+        }
+    }
+
+}
