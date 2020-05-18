@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/peter-lobo/static/css/main.513ff9db.chunk.css",
-    "main.js": "/peter-lobo/static/js/main.414e6fc3.chunk.js",
-    "main.js.map": "/peter-lobo/static/js/main.414e6fc3.chunk.js.map",
+    "main.js": "/peter-lobo/static/js/main.0df3561c.chunk.js",
+    "main.js.map": "/peter-lobo/static/js/main.0df3561c.chunk.js.map",
     "runtime-main.js": "/peter-lobo/static/js/runtime-main.8fa34b46.js",
     "runtime-main.js.map": "/peter-lobo/static/js/runtime-main.8fa34b46.js.map",
-    "static/js/2.64d6dd2c.chunk.js": "/peter-lobo/static/js/2.64d6dd2c.chunk.js",
-    "static/js/2.64d6dd2c.chunk.js.map": "/peter-lobo/static/js/2.64d6dd2c.chunk.js.map",
+    "static/js/2.6df7e938.chunk.js": "/peter-lobo/static/js/2.6df7e938.chunk.js",
+    "static/js/2.6df7e938.chunk.js.map": "/peter-lobo/static/js/2.6df7e938.chunk.js.map",
     "index.html": "/peter-lobo/index.html",
-    "precache-manifest.76f2c066a8f3d844080715431b9ca045.js": "/peter-lobo/precache-manifest.76f2c066a8f3d844080715431b9ca045.js",
+    "precache-manifest.a8d0a193cdb4734fb26701e78c19a7ed.js": "/peter-lobo/precache-manifest.a8d0a193cdb4734fb26701e78c19a7ed.js",
     "service-worker.js": "/peter-lobo/service-worker.js",
     "static/css/main.513ff9db.chunk.css.map": "/peter-lobo/static/css/main.513ff9db.chunk.css.map",
-    "static/js/2.64d6dd2c.chunk.js.LICENSE.txt": "/peter-lobo/static/js/2.64d6dd2c.chunk.js.LICENSE.txt"
+    "static/js/2.6df7e938.chunk.js.LICENSE.txt": "/peter-lobo/static/js/2.6df7e938.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8fa34b46.js",
-    "static/js/2.64d6dd2c.chunk.js",
+    "static/js/2.6df7e938.chunk.js",
     "static/css/main.513ff9db.chunk.css",
-    "static/js/main.414e6fc3.chunk.js"
+    "static/js/main.0df3561c.chunk.js"
   ]
 }
