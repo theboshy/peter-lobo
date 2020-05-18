@@ -25,19 +25,19 @@ function App() {
 
                       <section className={show ? "content" : ""}>
                           <nav className={show ? "menu menu--adsila" : "hidden"}>
-                              <a className="menu__item" href="#">
+                              <a className="menu__item" href="/bio">
                                   <span className="menu__item-name">Bio</span>
                                   <span className="menu__item-label">Explore Peter`s portfolios</span>
                               </a>
-                              <a className="menu__item" href="#">
+                              <a className="menu__item" href="/career">
                                   <span className="menu__item-name">Studies</span>
-                                  <span className="menu__item-label">Discover he studys</span>
+                                  <span className="menu__item-label">Discover Career</span>
                               </a>
-                              <a className="menu__item" href="#">
+                              <a className="menu__item" href="/project">
                                   <span className="menu__item-name">Projects</span>
                                   <span className="menu__item-label">View all achievements  </span>
                               </a>
-                              <a className="menu__item" href="#">
+                              <a className="menu__item" href="/contac">
                                   <span className="menu__item-name">Contact</span>
                                   <span className="menu__item-label">Contact with me </span>
                               </a>
