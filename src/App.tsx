@@ -45,7 +45,7 @@ function App() {
                           </nav>
                       </section>
 
-                      <ul className={show ? "social-icons" : "hidden"} >
+                      <!--<ul className={show ? "social-icons" : "hidden"} >
                           <li>
                               <a href="https://twitter.com/">
                               </a>
@@ -66,7 +66,7 @@ function App() {
                               <a href="https://www.linkedin.com/">
                               </a>
                           </li>
-                      </ul>
+                      </ul> -->
                   </nav>
               </div>
 
