@@ -37,7 +37,7 @@ function App() {
                                   <span className="menu__item-name">Projects</span>
                                   <span className="menu__item-label">View all achievements  </span>
                               </a>
-                              <a className="menu__item" href="/contac">
+                              <a className="menu__item" href="/contact">
                                   <span className="menu__item-name">Contact</span>
                                   <span className="menu__item-label">Contact with me </span>
                               </a>
@@ -45,28 +45,7 @@ function App() {
                           </nav>
                       </section>
 
-                      <!--<ul className={show ? "social-icons" : "hidden"} >
-                          <li>
-                              <a href="https://twitter.com/">
-                              </a>
-                          </li>
-                          <li>
-                              <a href="https://plus.google.com/‎">
-                              </a>
-                          </li>
-                          <li>
-                              <a href="https://www.facebook.com/">
-                              </a>
-                          </li>
-                          <li>
-                              <a href="https://github.com/">
-                              </a>
-                          </li>
-                          <li>
-                              <a href="https://www.linkedin.com/">
-                              </a>
-                          </li>
-                      </ul> -->
+
                   </nav>
               </div>
 
